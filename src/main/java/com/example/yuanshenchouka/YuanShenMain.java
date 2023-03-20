@@ -33,7 +33,8 @@ public class YuanShenMain {
         int chouKaCiShu = 450;
         //开始是否是大保底
         boolean bd = true;
-
+        //垫了多少抽
+        ChouKaShu = 0;
 
         System.out.println("请等待结果：");
         String si = "不是大保底";
