@@ -11,6 +11,9 @@ public class YuanShenMain {
     private static int LingHuaShu = 0;
     private static int ChouKaShu = 0;
     private static int WaiLe = 0;
+    private static double JieGuo0 = 0;
+    private static double JieGuo1 = 0;
+    private static double JieGuo2 = 0;
     private static double JieGuo3 = 0;
     private static double JieGuo4 = 0;
     private static double JieGuo5 = 0;
@@ -36,13 +39,13 @@ public class YuanShenMain {
 
     public static void main(String[] args) {
         //运算次数输入
-        double yunSuanCiShu = 100000;
+        double yunSuanCiShu = 1000000;
         //抽卡次数输入
-        int chouKaCiShu = 360;
+        int chouKaCiShu = 30;
         //开始是否是大保底
-        boolean bd = true;
+        boolean bd = false;
         //垫了多少抽
-        ChouKaShu = 50;
+        ChouKaShu = 0;
         //是否9折抽卡
         boolean jiuZhe = true;
 
@@ -116,6 +119,9 @@ public class YuanShenMain {
             }
 
             switch (LingHuaShu){
+                case 0 -> JieGuo0++;
+                case 1 -> JieGuo1++;
+                case 2 -> JieGuo2++;
                 case 3 -> JieGuo3++;
                 case 4 -> JieGuo4++;
                 case 5 -> JieGuo5++;
@@ -134,7 +140,10 @@ public class YuanShenMain {
             LingHuaShu = 0;
 //            System.out.println("运算执行完毕"+ j + "次");
         }
-        int y = (int)(JieGuo3+JieGuo4+JieGuo5+JieGuo6+JieGuo7+JieGuo8+JieGuo9+JieGuo10+JieGuo11+JieGuo12+JieGuo13+JieGuo14+JieGuo15);
+        int y = (int)(JieGuo0+JieGuo1+JieGuo2+JieGuo3+JieGuo4+JieGuo5+JieGuo6+JieGuo7+JieGuo8+JieGuo9+JieGuo10+JieGuo11+JieGuo12+JieGuo13+JieGuo14+JieGuo15);
+        float i0 = (float) (JieGuo0 / y * 100);
+        float i1 = (float) (JieGuo1 / y * 100);
+        float i2 = (float) (JieGuo2 / y * 100);
         float i3 = (float) (JieGuo3 / y * 100);
         float i4 = (float) (JieGuo4 / y * 100);
         float i5 = (float) (JieGuo5 / y * 100);
@@ -161,6 +170,9 @@ public class YuanShenMain {
         System.out.println("70-80只出金的概率是：" + (float)QiBa/z * 100 + "%");
         System.out.println("80-90只出金的概率是：" + (float)BaJiu/z * 100 + "%");
         System.out.println("抽中绫华命座的占比为：");
+        System.out.println("最终抽中0只绫华的占比为：" + i0 + "%");
+        System.out.println("最终抽中1只绫华的占比为：" + i1 + "%");
+        System.out.println("最终抽中2只绫华的占比为：" + i2 + "%");
         System.out.println("最终抽中3只绫华的占比为：" + i3 + "%");
         System.out.println("最终抽中4只绫华的占比为：" + i4 + "%");
         System.out.println("最终抽中5只绫华的占比为：" + i5 + "%");
