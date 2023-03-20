@@ -28,11 +28,11 @@ public class YuanShenMain {
 
     public static void main(String[] args) {
         //运算次数输入
-        double yunSuanCiShu = 10000000;
+        double yunSuanCiShu = 1000000;
         //抽卡次数输入
-        int chouKaCiShu = 380;
+        int chouKaCiShu = 450;
         //开始是否是大保底
-        boolean bd = false;
+        boolean bd = true;
         String si = "不是大保底";
         if(bd) {
             si = "是大保底";
@@ -50,7 +50,7 @@ public class YuanShenMain {
                 if (wuXing){
                     ChuJinZhun++;
                     ChouKaShu = 0;
-                    if (Wai.wai(bd)){
+                    if (Wai.wai(null)){
                         LingHuaShu++;
 //                    System.out.println("没歪！+++++++++++++++++++++++++++++++++");
                     }else {
@@ -83,7 +83,8 @@ public class YuanShenMain {
             ChuJinZhun = 0;
             WaiLe = 0;
             LingHuaShu = 0;
-            Wai.wai(true);
+            //让上一发是大保底
+            Wai.wai(bd);
             System.out.println("运算执行完毕"+ j + "次");
         }
         double y = yunSuanCiShu / 100;

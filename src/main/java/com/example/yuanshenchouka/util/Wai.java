@@ -10,8 +10,8 @@ public class Wai {
      * @param cc 上一发是否是大保底
      * @return 歪与没歪
      */
-    public static boolean wai(boolean cc){
-        if (cc){
+    public static boolean wai(Boolean cc){
+        if (cc != null && cc){
             waiLe = true;
         }
         if (waiLe){
