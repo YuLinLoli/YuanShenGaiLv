@@ -28,11 +28,14 @@ public class YuanShenMain {
 
     public static void main(String[] args) {
         //运算次数输入
-        double yunSuanCiShu = 1000000;
+        double yunSuanCiShu = 100000000;
         //抽卡次数输入
         int chouKaCiShu = 450;
         //开始是否是大保底
         boolean bd = true;
+
+
+        System.out.println("请等待结果：");
         String si = "不是大保底";
         if(bd) {
             si = "是大保底";
@@ -85,7 +88,7 @@ public class YuanShenMain {
             LingHuaShu = 0;
             //让上一发是大保底
             Wai.wai(bd);
-            System.out.println("运算执行完毕"+ j + "次");
+//            System.out.println("运算执行完毕"+ j + "次");
         }
         double y = yunSuanCiShu / 100;
         double i3 = JieGuo3 / y;
@@ -101,7 +104,7 @@ public class YuanShenMain {
         double i13 = JieGuo13 / y;
         double i14 = JieGuo14 / y;
         double i15 = JieGuo15 / y;
-        System.out.println("您选择了" + chouKaCiShu + "抽来抽绫华池子，开头第一发金" + si + "，结果如下：");
+        System.out.println("您选择了" + chouKaCiShu + "抽来抽绫华池子" + yunSuanCiShu + "次，开头第一发金" + si + "，结果如下：");
         System.out.println("最终抽中3只绫华的占比为：" + i3);
         System.out.println("最终抽中4只绫华的占比为：" + i4);
         System.out.println("最终抽中5只绫华的占比为：" + i5);
